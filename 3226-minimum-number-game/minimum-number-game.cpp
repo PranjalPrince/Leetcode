@@ -39,9 +39,9 @@ public:
             ans.push_back(v2[i]);
             ans.push_back(v1[i]);
         }
-        if(v.size()%2!=0){
-            ans.push_back(v1.size()-1);
-        }
+        // if(v.size()%2!=0){
+        //     ans.push_back(v1.size()-1);
+        // }
     return ans;
     }
 };
