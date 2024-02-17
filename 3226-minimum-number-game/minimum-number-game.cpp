@@ -24,24 +24,29 @@ public:
         //     ans.push_back(nums[i]);
         // }
         // return ans;
-        vector<int>v=nums;
-        sort(v.begin(),v.end());
-        vector<int>v1,v2;
-        for(int i=0;i<v.size();i++){
-            v1.push_back(v[i]);
-            if(i==v.size()-1)
-            break;
-            i++;
-            v2.push_back(v[i]);
+    //     vector<int>v=nums;
+    //     sort(v.begin(),v.end());
+    //     vector<int>v1,v2;
+    //     for(int i=0;i<v.size();i++){
+    //         v1.push_back(v[i]);
+    //         if(i==v.size()-1)
+    //         break;
+    //         i++;
+    //         v2.push_back(v[i]);
+    //     }
+    //     vector<int>ans;
+    //     for(int i=0;i<v2.size();i++){
+    //         ans.push_back(v2[i]);
+    //         ans.push_back(v1[i]);
+    //     }
+    //     // if(v.size()%2!=0){
+    //     //     ans.push_back(v1.size()-1);
+    //     // }
+    // return ans;
+        sort(nums.begin(),nums.end());
+        for(int i=0;i<nums.size();i+=2){
+            swap(nums[i],nums[i+1]);
         }
-        vector<int>ans;
-        for(int i=0;i<v2.size();i++){
-            ans.push_back(v2[i]);
-            ans.push_back(v1[i]);
-        }
-        // if(v.size()%2!=0){
-        //     ans.push_back(v1.size()-1);
-        // }
-    return ans;
+        return nums;
     }
 };
