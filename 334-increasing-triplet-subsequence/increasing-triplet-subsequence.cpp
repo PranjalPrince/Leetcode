@@ -20,6 +20,9 @@ public:
         //     return true;
         // }
         // return false;
+        ios_base::sync_with_stdio(false);
+        cin.tie(NULL);
+        cout.tie(NULL);
         int a=INT_MAX,b=INT_MAX;
         for(int i=0;i<nums.size();i++){
             if(nums[i]<=a)
