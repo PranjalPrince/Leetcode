@@ -1,6 +1,9 @@
 class Solution {
 public:
     int bagOfTokensScore(vector<int>& v, int p) {
+        ios_base::sync_with_stdio(false);
+        cin.tie(NULL);
+        cout.tie(NULL);
         if(v.size()==1 and p>v[0])
         return 1;
         if(v.size()==0)
