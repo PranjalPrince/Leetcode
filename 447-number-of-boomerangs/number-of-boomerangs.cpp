@@ -3,6 +3,9 @@ public:
     int dis[501][501];
     
     int numberOfBoomerangs(vector<vector<int>>& points) {
+        ios_base:: sync_with_stdio(false);
+        cin.tie(NULL);
+        cout.tie(NULL);
         int n = points.size ();
         
         memset(dis, -1, sizeof(dis[0])*points.size()+1);
