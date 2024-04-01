@@ -1,6 +1,9 @@
 class Solution {
 public:
     int lengthOfLastWord(string s) {
+        ios_base::sync_with_stdio(0);
+        cin.tie(NULL);
+        cout.tie(NULL);
         int ans=0;
         bool f=1;
         for(int i=s.size()-1;i>=0;i--){
