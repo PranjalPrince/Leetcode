@@ -9,15 +9,21 @@ public:
             int c1,c2;
             v.push_back(a*60+b);
         }
+        // int ans=INT_MAX;
+        // for(int i=0;i<v.size();i++){
+        //     for(int j=0;j<v.size();j++){
+        //         if(i!=j){
+        //             ans=min(ans,abs(v[i]-v[j]));
+        //             ans=min(ans,1440-abs(v[i]-v[j]));
+        //         }
+        //     }
+        // }
+        sort(v.begin(),v.end());
         int ans=INT_MAX;
-        for(int i=0;i<v.size();i++){
-            for(int j=0;j<v.size();j++){
-                if(i!=j){
-                    ans=min(ans,abs(v[i]-v[j]));
-                    ans=min(ans,1440-abs(v[i]-v[j]));
-                }
-            }
+        for(int i=0;i<v.size()-1;i++){
+            ans=min(ans,v[i+1]-v[i]);
         }
+        ans=min(ans,v[0]+(1440-v[v.size()-1]));
         return ans;
     }
 };
