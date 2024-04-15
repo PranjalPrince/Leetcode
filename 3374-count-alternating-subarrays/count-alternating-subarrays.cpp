@@ -1,6 +1,9 @@
 class Solution {
 public:
     long long countAlternatingSubarrays(vector<int>& nums) {
+        ios_base::sync_with_stdio(0);
+        cin.tie(NULL);
+        cout.tie(NULL);
         long long ans=1;
         vector<int>v;
         v.push_back(nums[0]);
