@@ -1,21 +1,12 @@
 class Solution {
 public:
     int minRectanglesToCoverPoints(vector<vector<int>>& p, int w) {
-        set<int>s;
-        for(int i=0;i<p.size();i++){
-            s.insert(p[i][0]);
-        }
-        vector<int>v;
-        // map<int,int>mp;
-        for(auto x:s){
-            v.push_back(x);
-            // mp[x]=1;
-        }
-        int  last=-1,ans=0;
-        for(int i=0;i<v.size();i++){
-            if(v[i]>last){
+        sort(p.begin(),end(p));
+        int ans=0,last=-1;;
+        for(auto x:p){
+            if(x[0]>last){
                 ans++;
-                last=v[i]+w;
+                last=x[0]+w;
             }
         }
         return ans;
