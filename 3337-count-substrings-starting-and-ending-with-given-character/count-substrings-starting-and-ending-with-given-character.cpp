@@ -12,13 +12,14 @@ public:
     // const ll mod=10000000;
     long long countSubstrings(string s, char c) {
         long long res,ans=0,cnt=0;
-        for(int i=0;i<s.size();i++){
-            if(s[i]==c){
-                cnt++;
-                ans+=cnt;
-                // ans= ans%mod;
-            }
-        }
-        return ans;
+        // for(int i=0;i<s.size();i++){
+        //     if(s[i]==c){
+        //         cnt++;
+        //         ans+=cnt;
+        //         // ans= ans%mod;
+        //     }
+        // }
+        ans=count(begin(s),end(s),c);
+        return ans*(ans+1)/2;
     }
 };
