@@ -15,9 +15,9 @@ public:
         for(auto [key,val]:mp){
             cnt+=val/2;
         }
-        vector<int>ans;
-        ans.push_back(cnt);
-        ans.push_back(nums.size()-(cnt*2));
-        return ans;
+        // vector<int>ans;
+        // ans.push_back(cnt);
+        // ans.push_back(nums.size()-(cnt*2));
+        return {cnt,(int(nums.size())-(cnt*2))};
     }
 };
