@@ -3,7 +3,7 @@ auto speed=[](){
     cin.tie(NULL);
     cout.tie(NULL);
     return 0;
-};
+}();
 class Solution {
 public:
     string reversePrefix(string word, char ch) {
