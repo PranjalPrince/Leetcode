@@ -1,6 +1,12 @@
+auto speed=[](){
+ios_base::sync_with_stdio(0);
+cin.tie(NULL);
+cout.tie(NULL);
+return 0;
+}();
 class Solution {
     const int base=1337;
-    int powres(int a,int k){
+    int powback(int a,int k){
         a%=base;
         int result=1;
         for(int i=0;i<k;i++){
@@ -13,6 +19,6 @@ public:
         if(b.empty()) return 1;
         int last=b.back();
         b.pop_back();
-        return powres(superPow(a,b),10)*powres(a,last)%base;
+        return powback(superPow(a,b),10)*powback(a,last)%base;
     }
 };
