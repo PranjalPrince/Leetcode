@@ -1,9 +1,3 @@
-auto speed=[](){
-    ios_base::sync_with_stdio(0);
-    cin.tie(NULL);
-    cout.tie(NULL);
-    return 0;
-}();
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -14,13 +8,19 @@ auto speed=[](){
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
+auto speed=[](){
+    ios_base::sync_with_stdio(0);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    return 0;
+}();
 class Solution {
 public:
     ListNode* removeNodes(ListNode* head) {
         stack<ListNode*>st;
         ListNode* temp=head;
         while(temp!=nullptr){
-            while(!st.empty() and temp->val>st.top()->val){
+            while(!st.empty() and st.top()->val<temp->val){
                 st.pop();
             }
             st.push(temp);
@@ -28,10 +28,10 @@ public:
         }
         ListNode* nxt=nullptr;
         while(!st.empty()){
-            temp=st.top();
+            ListNode* val=st.top();
+            val->next=nxt;
+            nxt=val;
             st.pop();
-            temp->next=nxt;
-            nxt=temp;
         }
         return nxt;
     }
