@@ -1,3 +1,9 @@
+auto speed=[](){
+    ios_base::sync_with_stdio(0);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+    return 0;
+}();
 class Solution {
 public:
     void sortColors(vector<int>& nums) {
@@ -7,8 +13,7 @@ public:
             a++;
             else if(nums[i]==1)
             b++;
-            else 
-            c++;
+            else c++;
         }
         int j=0;
         for(int i=0;i<a;i++){
