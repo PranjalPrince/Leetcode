@@ -1,3 +1,9 @@
+auto speed=[](){
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(NULL);
+    return 0;
+}();
 class Solution {
 public:
     double averageWaitingTime(vector<vector<int>>& cust) {
