@@ -7,18 +7,22 @@ public:
         for(int i=0;i<arr.size();i++){
             mp[arr[i]]++;
         }
-        int fre=0;
-        vector<pair<int,int>>v(mp.begin(),mp.end());
-        sort(v.begin(),v.end(),[](const auto&a, const auto& b){return a.second<b.second;});
-        for(auto &[key,val]:v){
-            if(k>val){
-                k-=val;
-                fre++;
-                cout<<"hello"<<endl;
-            }
-            else{
-                return v.size()- (val==k?1:0)-fre;
-            }
+        vector<int>v;
+        for(auto [key,val]:mp){
+            v.push_back(val);
+        }
+        
+        sort(begin(v),end(v));
+        for(auto x:v)
+        cout<<x<<' ';
+        cout<<endl;
+        for(int i=0;i<v.size();i++){
+            if(v[i]<k)
+            k-=v[i];
+            else if(v[i]==k)
+            return v.size()-i-1;
+            else
+            return v.size()-i;
         }
         return -1;
     }
