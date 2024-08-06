@@ -1,3 +1,9 @@
+auto speed=[](){
+    ios_base::sync_with_stdio(0);
+    cin.tie(nullptr);
+    cout.tie(NULL);
+    return 0;
+}();
 class Solution {
 public:
     int minimumPushes(string word) {
